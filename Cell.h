@@ -11,6 +11,8 @@ protected:
 public:
   Cell(int x, int y, char t) : position(x, y), type(t) {}
 
+  virtual ~Cell() = default; // Add a virtual destructor
+
   std::tuple<int, int> getPos() const { return position; }
 
   char getType() const { return type; }
